@@ -5,6 +5,8 @@ exports.config = {
     baseUrl: 'http://localhost:3000',
     capabilities: {
       'browserName': 'firefox',
+      'version': '32',
+      'platform': 'Linux',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
       'build': process.env.TRAVIS_BUILD_NUMBER,
       'name': 'AgileJS Training Repo'
