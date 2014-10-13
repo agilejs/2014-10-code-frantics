@@ -1,8 +1,8 @@
-function AppCtrl ($scope) {
+function AppCtrl ($scope, $location) {
     'use strict';
     $scope.title = 'The Movie Database';
     $scope.isActive = function(route) {
-        return route === location.path();
+        return route === $location.path();
     };
 }
 
