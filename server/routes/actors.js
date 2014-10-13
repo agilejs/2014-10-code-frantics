@@ -61,7 +61,7 @@ exports = module.exports = function (db) {
             logger.debug('Found actor#%s with name: %s', id, node.data.name);
             res.send(node.data);
         });
-    }
+    };
 
 
     exports.deleteActor = function (req, res) {

@@ -85,7 +85,7 @@ exports = module.exports = function (db) {
     exports.addMovie = function (req, res) {
         var node = db.createNode(req.body);
         node.data.type = 'movie';
-        node.data.id = uid.v4();
+        node.data.id = uuid.v4();
         logger.debug('Adding a new movie');
         node.save(function (err, savedNode) {
             if (err) {
