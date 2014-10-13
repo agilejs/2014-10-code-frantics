@@ -116,6 +116,11 @@ exports = module.exports = function (db) {
             }
             node.data.title = req.body.title;
             node.data.description = req.body.description;
+            if (req.body.releaseYear === '' || !req.body.releaseYear) {
+                node.data.releaseYear = 'Unknown';
+            } else {
+                node.data.releaseYear = req.body.releaseYear;
+            }
             node.save(function (err, savedNode) {
                 if (err) {
                     logger.error('Failed to update movie#%s: %s', id, err);
