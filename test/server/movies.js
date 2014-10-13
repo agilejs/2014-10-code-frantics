@@ -5,7 +5,7 @@ var expect = chai.expect;
 var neo4j = require('neo4j');
 var ResponseMock = require('./helper/response-mock');
 
-describe('getMovie', function () {
+describe('getActor', function () {
     var dbStub;
     var routes;
     var movies;
@@ -48,7 +48,7 @@ describe('getMovie', function () {
 
         // execute the method we want to test and pass the ResponseMock object, 
         // that will be used for verifications later
-        movies.getMovies({}, responseMock);
+        movies.getActors({}, responseMock);
 
         // now lets execute some verifications
         responseMock.verify(function(responseData) {
@@ -70,7 +70,7 @@ describe('getMovie', function () {
                 null
             );
 
-        movies.getMovies({}, responseMock);
+        movies.getActors({}, responseMock);
 
         responseMock.verify(function(responseData) {
             expect(responseData.status).to.equal(200);
@@ -88,7 +88,7 @@ describe('getMovie', function () {
                 null
             );
 
-        movies.getMovies({}, responseMock);
+        movies.getActors({}, responseMock);
 
         responseMock.verify(function(responseData) {
             expect(responseData.status).to.equal(500);
@@ -105,7 +105,7 @@ describe('getMovie', function () {
                  {data: {title:'Django Unchained', description:'Another Description'}}]
             );
 
-        movies.getMovies({}, responseMock);
+        movies.getActors({}, responseMock);
 
         responseMock.verify(function(responseData) {
             expect(responseData.status).to.equal(200);

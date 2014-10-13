@@ -9,7 +9,7 @@ module.exports = function() {
         browser.get('/movies/new');
     };
 
-    this.addMovie = function(title, description) {
+    this.addActor = function(title, description) {
         this.open();
         this.title.clear();
         this.title.sendKeys(title);
