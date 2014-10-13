@@ -22,7 +22,7 @@ angular.module('MovieDatabase', ['ngRoute']).config(
         resolve: MoviesListCtrl.resolve,
         templateUrl: '/partial/movies/list.html'
     })
-    .when('/movies/new', {
+    .when('/movies/add', {
         controller: MoviesAddCtrl,
         templateUrl: '/partial/movies/add.html'
     })
