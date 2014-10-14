@@ -108,7 +108,7 @@ function ActorsAddCtrl ($scope, $http, $location) {
     'use strict';
     $scope.actor = {};
     $scope.save = function (actor) {
-        $http.post('/movies', actor)
+        $http.post('/actors', actor)
             .success(function(res) {
                 $location.path('/actors/' + res.id);
             });
@@ -139,7 +139,7 @@ function ActorEditCtrl ($scope, $http, $location, actorsResponse) {
     'use strict';
     $scope.actor = actorsResponse.data;
     $scope.save = function () {
-        $http.put('/movies/' + $scope.actor.id, $scope.actor)
+        $http.put('/actors/' + $scope.actor.id, $scope.actor)
             .success(function (res) {
                 $location.path('/actors/' + $scope.actor.id);
             });

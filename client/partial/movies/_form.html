@@ -7,8 +7,7 @@
              name="title"
              class="input-block-level"
              autofocus
-             ng-model="movie.title"
-             required>
+             ng-model="movie.title">
     </div>
   </div>
   <div class="control-group">
@@ -18,8 +17,7 @@
                 id="inputDescription"
                 name="description"
                 class="input-block-level"
-                ng-model="movie.description"
-                required>
+                ng-model="movie.description">
         </text-angular>
     </div>
   </div>
@@ -33,8 +31,7 @@
                    id="inputRelease"
                    name="release"
                    class="input-block-level"
-                   ng-model="movie.release"
-                   required>
+                   ng-model="movie.release">
             <span style="color:red;" ng-show="movieForm.release.$dirty && movieForm.release.$invalid">Year must consist out of 4 characters and be larger than 1900.</span>
         </div>
     </div>

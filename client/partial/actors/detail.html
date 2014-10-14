@@ -1,10 +1,10 @@
 <h2>{{actor.title}}</h2>
 
 <dl class="dl-horizontal">
-  <dt>Description</dt>
-  <dd><div ng-bind-html="actor.description"></div></dd>
-  <dt>Release Year</dt>
-  <dd>{{actor.release}}</dd>
+  <dt>Name</dt>
+  <dd>{{actor.name}}></dd>
+  <dt>Biography</dt>
+  <dd><div ng-bind-html="actor.biography"></div></dd>
 </dl>
 
 <a href="/actors/{{actor.id}}/edit" title="Edit actor" class="btn">
