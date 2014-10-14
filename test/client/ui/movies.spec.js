@@ -46,7 +46,7 @@ describe('Movies', function() {
 
     it('should enable addition of movies', function() {
         movieOverview.navigateToAddMovie();
-        expect(browser.getCurrentUrl()).toMatch(/\/movies\/new$/);
+        expect(browser.getCurrentUrl()).toMatch(/\/movies\/add$/);
     });
 
     it('should add movies and forward to the detail view', function() {

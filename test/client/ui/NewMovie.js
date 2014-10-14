@@ -6,7 +6,7 @@ module.exports = function() {
     this.save = element(by.css('.btn-primary'));
 
     this.open = function() {
-        browser.get('/movies/new');
+        browser.get('/movies/add');
     };
 
     this.addActor = function(title, description) {
